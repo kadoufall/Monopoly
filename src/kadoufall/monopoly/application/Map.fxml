@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import kadoufall.monopoly.application.*?>
+
+<VBox prefHeight="650.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kadoufall.monopoly.application.Controller">
+	<children>
+		<MenuBar VBox.vgrow="NEVER">
+			<menus>
+				<Menu mnemonicParsing="false" text="信息">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#playerInfo" text="查看玩家信息" />
+						<MenuItem mnemonicParsing="false" onAction="#locInfo" text="查看指定位置信息" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="投降">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#givein" text="投降" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="道具">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#useCard" text="使用道具" />
+						<MenuItem mnemonicParsing="false" onAction="#discard" text="丢弃道具" />
+						<MenuItem mnemonicParsing="false" onAction="#hasCard" text="查看拥有道具" />
+						<MenuItem mnemonicParsing="false" onAction="#seeCard" text="查看道具信息" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="股票">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#stock" text="进入股市" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<FlowPane prefHeight="605.0" prefWidth="1280.0">
+			<children>
+				<AnchorPane id="Content" prefHeight="605.0" prefWidth="1074.0">
+					<children>
+						<Label id="Dice" fx:id="dice" layoutX="454.0" layoutY="134.0" onMouseClicked="#Dice" />
+						<Point fx:id="Cell_110" layoutX="64.0" layoutY="64.0" styleClass="Cell" />
+						<Label fx:id="Cell_1" layoutX="364.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_3" layoutX="264.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_4" layoutX="214.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_6" layoutX="114.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_7" layoutX="954.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_8" layoutX="954.0" layoutY="464.0" styleClass="LandMark" />
+						<Label fx:id="Cell_9" layoutX="764.0" layoutY="24.0" styleClass="LandMark" />
+						<Label fx:id="Cell_10" layoutX="954.0" layoutY="364.0" styleClass="LandMark" />
+						<Label fx:id="Cell_12" layoutX="954.0" layoutY="264.0" styleClass="LandMark" />
+						<Label fx:id="Cell_13" layoutX="954.0" layoutY="214.0" styleClass="LandMark" />
+						<Label fx:id="Cell_14" layoutX="954.0" layoutY="164.0" styleClass="LandMark" />
+						<Label fx:id="Cell_15" layoutX="954.0" layoutY="114.0" styleClass="LandMark" />
+						<Label fx:id="Cell_16" layoutX="754.0" layoutY="214.0" styleClass="LandMark" />
+						<Label fx:id="Cell_17" layoutX="614.0" layoutY="354.0" styleClass="LandMark" />
+						<Label fx:id="Cell_18" layoutX="564.0" layoutY="354.0" styleClass="LandMark" />
+						<Label fx:id="Cell_21" layoutX="414.0" layoutY="354.0" styleClass="LandMark" />
+						<Point fx:id="Cell_22" layoutX="714.0" layoutY="164.0" styleClass="Cell" />
+						<Label fx:id="Cell_23" layoutX="864.0" layoutY="24.0" styleClass="LandMark" />
+						<Point fx:id="Cell_24" layoutX="714.0" layoutY="214.0" styleClass="Cell" />
+						<Point fx:id="Cell_25" layoutX="714.0" layoutY="264.0" styleClass="Cell" />
+						<Label fx:id="Cell_26" layoutX="754.0" layoutY="164.0" styleClass="LandMark" />
+						<Point fx:id="Cell_27" layoutX="714.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_28" layoutX="664.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_29" layoutX="614.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_30" layoutX="564.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_31" layoutX="514.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_32" layoutX="464.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_33" layoutX="914.0" layoutY="114.0" styleClass="Cell" />
+						<Point fx:id="Cell_34" layoutX="914.0" layoutY="164.0" styleClass="Cell" />
+						<Point fx:id="Cell_35" layoutX="914.0" layoutY="214.0" styleClass="Cell" />
+						<Point fx:id="Cell_36" layoutX="914.0" layoutY="264.0" styleClass="Cell" />
+						<Point fx:id="Cell_37" layoutX="914.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_38" layoutX="914.0" layoutY="364.0" styleClass="Cell" />
+						<Point fx:id="Cell_39" layoutX="914.0" layoutY="414.0" styleClass="Cell" />
+						<Point fx:id="Cell_40" layoutX="914.0" layoutY="464.0" styleClass="Cell" />
+						<Point fx:id="Cell_41" layoutX="914.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_42" layoutX="864.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_43" layoutX="814.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_44" layoutX="764.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_45" layoutX="714.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_46" layoutX="664.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_47" layoutX="614.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_48" layoutX="564.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_49" layoutX="514.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_50" layoutX="464.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_51" layoutX="414.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_52" layoutX="714.0" layoutY="114.0" styleClass="Cell" />
+						<Point fx:id="Cell_53" layoutX="914.0" layoutY="64.0" styleClass="Cell" />
+						<Point fx:id="Cell_54" layoutX="864.0" layoutY="64.0" styleClass="Cell" />
+						<Point fx:id="Cell_55" layoutX="814.0" layoutY="64.0" styleClass="Cell" />
+						<Point fx:id="Cell_56" layoutX="764.0" layoutY="64.0" styleClass="Cell" />
+						<Point fx:id="Cell_57" layoutX="714.0" layoutY="64.0" styleClass="Cell" />
+						<Label fx:id="Cell_58" layoutX="754.0" layoutY="264.0" styleClass="LandMark" />
+						<Label fx:id="Cell_59" layoutX="664.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_60" layoutX="674.0" layoutY="24.0" styleClass="LandMark" />
+						<Label fx:id="Cell_61" layoutX="564.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_62" layoutX="954.0" layoutY="24.0" styleClass="LandMark" />
+						<Point fx:id="Cell_63" layoutX="264.0" layoutY="64.0" styleClass="Cell" />
+						<Label fx:id="Cell_64" layoutX="714.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_65" layoutX="764.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_66" layoutX="754.0" layoutY="354.0" styleClass="LandMark" />
+						<Label fx:id="Cell_67" layoutX="864.0" layoutY="554.0" styleClass="LandMark" />
+						<Point fx:id="Cell_68" layoutX="414.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_69" layoutX="364.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_70" layoutX="264.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_71" layoutX="314.0" layoutY="314.0" styleClass="Cell" />
+						<Label fx:id="Cell_73" layoutX="214.0" layoutY="24.0" styleClass="LandMark" />
+						<Point fx:id="Cell_74" layoutX="264.0" layoutY="264.0" styleClass="Cell" />
+						<Point fx:id="Cell_75" layoutX="264.0" layoutY="214.0" styleClass="Cell" />
+						<Label fx:id="Cell_76" layoutX="224.0" layoutY="164.0" styleClass="LandMark" />
+						<Point fx:id="Cell_77" layoutX="264.0" layoutY="164.0" styleClass="Cell" />
+						<Point fx:id="Cell_78" layoutX="264.0" layoutY="114.0" styleClass="Cell" />
+						<Label fx:id="Cell_79" layoutX="314.0" layoutY="354.0" styleClass="LandMark" />
+						<Label fx:id="Cell_80" layoutX="224.0" layoutY="354.0" styleClass="LandMark" />
+						<Point fx:id="Cell_81" layoutX="364.0" layoutY="514.0" styleClass="Cell" />
+						<Label fx:id="Cell_82" layoutX="224.0" layoutY="264.0" styleClass="LandMark" />
+						<Point fx:id="Cell_83" layoutX="314.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_84" layoutX="214.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_85" layoutX="264.0" layoutY="514.0" styleClass="Cell" />
+						<Label fx:id="Cell_86" layoutX="224.0" layoutY="214.0" styleClass="LandMark" />
+						<Point fx:id="Cell_87" layoutX="64.0" layoutY="464.0" styleClass="Cell" />
+						<Point fx:id="Cell_88" layoutX="164.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_89" layoutX="64.0" layoutY="514.0" styleClass="Cell" />
+						<Point fx:id="Cell_90" layoutX="114.0" layoutY="514.0" styleClass="Cell" />
+						<Label fx:id="Cell_91" layoutX="24.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_92" layoutX="24.0" layoutY="364.0" styleClass="LandMark" />
+						<Label fx:id="Cell_93" layoutX="24.0" layoutY="264.0" styleClass="LandMark" />
+						<Point fx:id="Cell_94" layoutX="64.0" layoutY="414.0" styleClass="Cell" />
+						<Point fx:id="Cell_95" layoutX="64.0" layoutY="364.0" styleClass="Cell" />
+						<Point fx:id="Cell_96" layoutX="64.0" layoutY="264.0" styleClass="Cell" />
+						<Point fx:id="Cell_97" layoutX="64.0" layoutY="314.0" styleClass="Cell" />
+						<Point fx:id="Cell_98" layoutX="64.0" layoutY="214.0" styleClass="Cell" />
+						<Label fx:id="Cell_99" layoutX="24.0" layoutY="164.0" styleClass="LandMark" />
+						<Point fx:id="Cell_100" layoutX="64.0" layoutY="164.0" styleClass="Cell" />
+						<Label fx:id="Cell_101" layoutX="24.0" layoutY="114.0" styleClass="NewsMark" />
+						<Point fx:id="Cell_102" layoutX="64.0" layoutY="114.0" styleClass="Cell" />
+						<Label fx:id="Cell_103" layoutX="164.0" layoutY="24.0" styleClass="LandMark" />
+						<Point fx:id="Cell_104" layoutX="214.0" layoutY="64.0" styleClass="Cell" />
+						<Point fx:id="Cell_106" layoutX="164.0" layoutY="64.0" styleClass="Cell" />
+						<Label fx:id="Cell_107" layoutX="114.0" layoutY="24.0" styleClass="LandMark" />
+						<Point fx:id="Cell_108" layoutX="114.0" layoutY="64.0" styleClass="Cell" />
+						<Label fx:id="Cell_109" layoutX="24.0" layoutY="24.0" styleClass="LandMark" />
+						<Label fx:id="Cell_119" layoutX="24.0" layoutY="214.0" styleClass="LotteryMark" />
+						<Label fx:id="Cell_166" layoutX="24.0" layoutY="314.0" styleClass="BankMark" />
+						<Label fx:id="Cell_139" layoutX="164.0" layoutY="554.0" styleClass="LandMark" />
+						<Label fx:id="Cell_149" layoutX="304.0" layoutY="24.0" styleClass="LandMark" />
+						<Label fx:id="Cell_159" layoutX="224.0" layoutY="114.0" styleClass="BankMark" />
+						<Label fx:id="Cell_169" layoutX="364.0" layoutY="354.0" styleClass="LandMark" />
+						<Label fx:id="Cell_179" layoutX="464.0" layoutY="354.0" styleClass="HospitalMark" />
+						<Label fx:id="Cell_189" layoutX="514.0" layoutY="354.0" styleClass="StoreMark" />
+						<Label fx:id="Cell_199" layoutX="664.0" layoutY="354.0" styleClass="GiveMark" />
+						<Label fx:id="Cell_118" layoutX="614.0" layoutY="554.0" styleClass="SpaceMark" />
+						<Label fx:id="Cell_120" layoutX="754.0" layoutY="114.0" styleClass="BankMark" />
+						<Label fx:id="Cell_121" layoutX="814.0" layoutY="24.0" styleClass="GiveMark" />
+						<Label fx:id="Cell_122" layoutX="954.0" layoutY="314.0" styleClass="GiveMark" />
+						<Label fx:id="Cell_123" layoutX="954.0" layoutY="414.0" styleClass="BankMark" />
+						<Label fx:id="Cell_124" layoutX="814.0" layoutY="554.0" styleClass="LotteryMark" />
+						<Label fx:id="Cell_125" layoutX="514.0" layoutY="554.0" styleClass="StoreMark" />
+						<Label fx:id="Cell_126" layoutX="464.0" layoutY="554.0" styleClass="NewsMark" />
+						<Label fx:id="Cell_127" layoutX="414.0" layoutY="554.0" styleClass="SpaceMark" />
+						<Label fx:id="Cell_128" layoutX="314.0" layoutY="554.0" styleClass="GiveMark" />
+						<Label fx:id="Cell_129" layoutX="24.0" layoutY="414.0" styleClass="LandMark" />
+						<Label fx:id="Cell_130" layoutX="24.0" layoutY="464.0" styleClass="LandMark" />
+
+					</children>
+				</AnchorPane>
+				<AnchorPane prefWidth="206.0">
+					<children>
+						<TitledPane animated="false" collapsible="false" style="-fx-border-color: Black;" text="游戏信息" translateY="5.0">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<Label id="gameInfo" fx:id="gameInfo" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="180.0" prefWidth="202.0">
+											<font>
+												<Font size="25.0" />
+											</font>
+										</Label>
+									</children>
+								</AnchorPane>
+							</content>
+						</TitledPane>
+						<TitledPane animated="false" collapsible="false" prefHeight="340.0" prefWidth="202.0" style="-fx-border-color: Black;" text="玩家信息" translateY="215.0">
+							<content>
+								<GridPane prefWidth="200.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="97.0" />
+										<ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="83.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+										<RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label fx:id="playerInfo_icon" prefHeight="100.0" prefWidth="100.0" />
+										<Label fx:id="playerInfo_name" prefHeight="60.0" prefWidth="60.0" GridPane.columnIndex="1">
+											<GridPane.margin>
+												<Insets left="10.0" />
+											</GridPane.margin>
+											<font>
+												<Font size="32.0" />
+											</font>
+										</Label>
+										<Label fx:id="playerInfo_cash" contentDisplay="CENTER" prefHeight="33.0" prefWidth="74.0" styleClass="playerInfo" text="  现金：" GridPane.rowIndex="1" />
+										<Label fx:id="playerInfo_cash_num" prefHeight="15.0" prefWidth="71.0" styleClass="playerInfo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+										<Label fx:id="playerInfo_deposit" prefHeight="15.0" prefWidth="82.0" styleClass="playerInfo" text="  存款：" GridPane.rowIndex="2" />
+										<Label fx:id="playerInfo_deposit_num" prefHeight="15.0" prefWidth="74.0" styleClass="playerInfo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+										<Label fx:id="playerInfo_coupon" prefHeight="15.0" prefWidth="82.0" styleClass="playerInfo" text="  点券：" GridPane.rowIndex="3" />
+										<Label fx:id="playerInfo_coupon_num" prefHeight="15.0" prefWidth="68.0" styleClass="playerInfo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+										<Label fx:id="playerInfo_stock" prefHeight="15.0" prefWidth="83.0" styleClass="playerInfo" text="  股票：" GridPane.rowIndex="4" />
+										<Label fx:id="playerInfo_property" prefHeight="15.0" prefWidth="81.0" styleClass="playerInfo" text="  资产：" GridPane.rowIndex="5" />
+										<Label fx:id="playerInfo_property_num" prefHeight="15.0" prefWidth="69.0" styleClass="playerInfo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+										<Label fx:id="playerInfo_stock_num" prefHeight="15.0" prefWidth="69.0" styleClass="playerInfo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+									</children>
+								</GridPane>
+							</content>
+						</TitledPane>
+					</children>
+					<padding>
+						<Insets right="2.0" />
+					</padding>
+				</AnchorPane>
+			</children>
+		</FlowPane>
+		<HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+			<children>
+				<Label fx:id="state" maxHeight="1.7976931348623157E308" maxWidth="-1.0" prefHeight="15.0" prefWidth="678.0" HBox.hgrow="ALWAYS">
+					<font>
+						<Font size="13.0" fx:id="x3" />
+					</font>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+				</Label>
+			</children>
+			<padding>
+				<Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+			</padding>
+			<opaqueInsets>
+				<Insets left="10.0" />
+			</opaqueInsets>
+		</HBox>
+	</children>
+	<stylesheets>
+		<URL value="@Map.css" />
+	</stylesheets>
+</VBox>

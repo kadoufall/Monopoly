@@ -1,0 +1,83 @@
+.menu-bar {
+    -fx-background-color: #aeb5ba, linear-gradient(to bottom, #ecf4fa 0%, #ced4d9 100%);
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.menu-bar .menu .label {
+    -fx-text-fill: #2d3e4c;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: linear-gradient(to right, #ecf4fa 0%, #ced4d9 100%);
+    -fx-padding: 0 3 0 3;
+}
+
+.scroll-pane {
+    -fx-background-insets: 0, 0;
+    -fx-padding: 0;
+}
+
+
+
+#Content .Cell{
+	-fx-border-color:Black;
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-alignment:center;
+
+}
+
+#Content #Dice {
+	-fx-pref-height:100;
+	-fx-pref-width:100;
+}
+
+#Content .BankMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/bank.png);
+}
+
+#Content .LotteryMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/lottery.gif);
+}
+
+#Content .LandMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/N0.png);
+}
+
+#Content .GiveMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/give.png);
+}
+
+#Content .SpaceMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/space.png);
+}
+
+#Content .StoreMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/store.jpg);
+}
+
+#Content .HospitalMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/hosipital.jpg);
+}
+
+#Content .NewsMark {
+	-fx-pref-height:40;
+	-fx-pref-width:40;
+	-fx-background-image:url(icons/news.jpg);
+
+}
+

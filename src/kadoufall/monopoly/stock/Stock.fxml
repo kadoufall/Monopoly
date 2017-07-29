@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import kadoufall.monopoly.stock.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox prefHeight="600.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="kadoufall.monopoly.stock.StockController">
+	<children>
+		<Label style="-fx-font: NORMAL 20 Tahoma;" text="股票市场">
+			<VBox.margin>
+				<Insets bottom="10.0" top="10.0" />
+			</VBox.margin>
+		</Label>
+		<LineChart fx:id="lineChart" maxWidth="800.0" prefHeight="200.0">
+			<xAxis>
+				<CategoryAxis side="BOTTOM" fx:id="x" />
+			</xAxis>
+			<yAxis>
+				<NumberAxis side="LEFT" fx:id="y" />
+			</yAxis>
+			<padding>
+				<Insets left="10.0" right="10.0" />
+			</padding>
+		</LineChart>
+		<TableView fx:id="tableView" maxWidth="800.0" prefWidth="600.0">
+			<columns>
+				<TableColumn fx:id="name" prefWidth="100.0" text="股票名称">
+					<cellFactory>
+						<FormattedTableCellFactory alignment="CENTER" />
+					</cellFactory>
+					<cellValueFactory>
+						<PropertyValueFactory property="name" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="100.0" text="成交价">
+					<cellFactory>
+						<FormattedTableCellFactory alignment="CENTER" />
+					</cellFactory>
+					<cellValueFactory>
+						<PropertyValueFactory property="price" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="100.0" text="涨跌">
+					<cellFactory>
+						<FormattedTableCellFactory alignment="CENTER" />
+					</cellFactory>
+					<cellValueFactory>
+						<PropertyValueFactory property="ratePrint" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="100.0" text="库存">
+					<cellFactory>
+						<FormattedTableCellFactory alignment="CENTER" />
+					</cellFactory>
+					<cellValueFactory>
+						<PropertyValueFactory property="inventory" />
+					</cellValueFactory>
+				</TableColumn>
+
+				<TableColumn prefWidth="113.0" text="持股">
+					<columns>
+						<TableColumn prefWidth="70.0" text="A">
+							<cellFactory>
+								<FormattedTableCellFactory alignment="CENTER" />
+							</cellFactory>
+							<cellValueFactory>
+								<PropertyValueFactory property="A" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn prefWidth="70.0" text="B">
+							<cellFactory>
+								<FormattedTableCellFactory alignment="CENTER" />
+							</cellFactory>
+							<cellValueFactory>
+								<PropertyValueFactory property="B" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn prefWidth="70.0" text="C">
+							<cellFactory>
+								<FormattedTableCellFactory alignment="CENTER" />
+							</cellFactory>
+							<cellValueFactory>
+								<PropertyValueFactory property="C" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn prefWidth="70.0" text="D">
+							<cellFactory>
+								<FormattedTableCellFactory alignment="CENTER" />
+							</cellFactory>
+							<cellValueFactory>
+								<PropertyValueFactory property="D" />
+							</cellValueFactory>
+						</TableColumn>
+					</columns>
+				</TableColumn>
+				<TableColumn prefWidth="100.0" text="平均成本">
+					<cellFactory>
+						<FormattedTableCellFactory alignment="CENTER" />
+					</cellFactory>
+					<cellValueFactory>
+						<PropertyValueFactory property="aveCost" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+			<items>
+				<!-- <FXCollections fx:factory="observableArrayList"> <Stock name="壳牌石油" 
+					price="40" /> <Stock name="诺贝尔" price="150" /> <Stock name="宝丽金" price="25" 
+					/> <Stock name="联合利华" price="20" /> <Stock name="亨氏" price="100" /> <Stock 
+					name="哈雷戴维森" price="55" /> <Stock name="IBM公司" price="90" /> <Stock name="瞻博网路" 
+					price="35" /> <Stock name="摩根大通" price="30" /> <Stock name="美赞臣" price="120" 
+					/> </FXCollections> -->
+			</items>
+			<sortOrder>
+				<fx:reference source="name" />
+			</sortOrder>
+			<padding>
+				<Insets left="21.0" />
+			</padding>
+		</TableView>
+	</children>
+</VBox>
